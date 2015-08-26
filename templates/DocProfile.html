@@ -1,0 +1,72 @@
+<div id="w" class="contents">
+			 	
+	<div id="content" class="clearfix">
+				   
+		<div ng-repeat="doc in Doctors | filter:Doctor" >
+
+			<div class="popup" id="login" style="display:none;">
+				<h1>View Schedule</h1>
+			</div>
+			
+			<div id="userphoto"><img src="{{doc.photoUrl}}" alt="default avatar" width="150px" height="150px" ></div>
+			 
+			<h1 style="font-size:2.5em;">
+			{{doc.name}} 
+			</h1>
+			  
+			<nav id="profiletabs">
+				<ul class="clearfix">  
+				</ul>
+			</nav>
+				
+			<div style = "height: 50px;"> </div> 
+			
+			<section id="settings" >
+			
+				<p>Details:</p>
+
+				<p class="setting"><span>Gender</span> {{doc.gender}}</p>
+						
+				<p class="setting"><span>Speciality</span> {{doc.type}}</p>
+			  
+				<p class="setting"><span>Qualification</span> {{doc.qualifications}}</p>
+
+				<p class="setting"><span>Location </span> {{doc.location}}</p>
+
+				<p class="setting"><span>Schedule </span> </p>  
+				<br>
+				<table class="bordered" style="width:50%;" data-ng-init="names=doc.schedule1" >  
+					<thead>
+						<tr>
+							<th>Day</th>        
+							<th>Time Period</th>
+							
+						</tr>
+					</thead>
+					
+					<tr  data-ng-repeat="x in names">
+						<td>{{x.day}}</td>  
+						<td style=>{{x.timeperiod}}</td>
+					</tr>
+
+				</table>
+
+			</section>
+
+		</div>
+
+	</div><!-- @end #content -->
+
+	<div style="padding:2%;">
+		<a href="" ng-click="prevProfile()">
+			<img src="images/prev1.png" width="5%" style="margin-left:5%; float:left"/>
+		</a>
+		<a href="" ng-click="nextProfile()">
+		<img src="images/next1.png" width="5%" style="float:right" />
+		</a>
+	</div>   
+
+	<div class="clear"> </div>
+
+</div><!-- @end #w -->
+

@@ -1,0 +1,203 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="popup" style="height:35px;width:100%; background-image: linear-gradient(top, #edf3f9, #fff);  background-image: -webkit-linear-gradient(top, #edf3f9, #fff);  background-image: -o-linear-gradient(top, #edf3f9, #fff);  background-image: -ms-linear-gradient(top, #edf3f9, #fff);  background-image: -moz-linear-gradient(top, #edf3f9, #fff);;" > 
+		
+	<form id="loginform" name="loginform" class="css-form" novalidate  autocomplete="on">
+		
+		<!--Back Button !-->
+		<a href="index.html" ><img src="images/back.png" width="3.5%" /></a>
+		<!--end Back Button !-->
+		
+		<div style=" float:right;width:15%;margin-right:15px;" class="center">
+				<input type="submit" ng-click="getDoctors(user,1)" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Search" tabindex="3">
+		</div>
+		
+		<input style=" float:right;width:16%;margin-right:15px;" type="datetime-local" id="datetime" ng-model="user.datetime" name="datetime">
+		
+		<select style=" float:right;width:10%;margin-right:15px;"  name="s_gender"  ng-model="user.gender"  class="txtfield" tabindex="1">
+			<option value="Both">Any Gender</option>
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+		</select> 
+			  
+		<select style=" float:right;width:15%;margin-right:15px;" name="s_docType" ng-model="user.docType" class="txtfield" tabindex="1">
+			<option value="All" selected="selected">Speciality</option>
+			<option value="Anesthesia & Intensive Care">Anesthesia & Intensive Care</option>
+			<option value="Cardiology">Cardiology</option>
+			<option value="Dental">Dental</option>
+			<option value="Dermatology">Dermatology</option>
+			<option value="Endocrinology">Endocrinology</option>
+			<option value="ENTsurgery">ENTsurgery</option>
+			<option value="Eye Specialist / Ophthalmology">Eye Specialist / Ophthalmology</option>
+			<option value="Gastroenterology/Hepatology">Gastroenterology/Hepatology</option>
+			<option value="General & Laparoscopic Surgeons">General & Laparoscopic Surgeons</option>
+			<option value="General Physician / Medical Specialist / Internist">General Physician / Medical Specialist / Internist</option>
+			<option value="Gynae-Obs">Gynae-Obs</option>
+			<option value="Histopathologist">Histopathologist</option>
+			<option value="Haematologist">Haematologist</option>
+			<option value="Microbiologist">Microbiologist</option>
+			<option value="Nephrology">Nephrology</option>
+			<option value="Neuro Physician">Neuro Physician</option>
+			<option value="Neuro Surgeon">Neuro Surgeon</option>
+			<option value="Orthopedic Surgery">Orthopedic Surgery</option>
+			<option value="Psychologist">Psychologist</option>
+			<option value="Psychiatrist">Psychiatrist</option>
+			<option value="Plastic & Burn Surgeon">Plastic & Burn Surgeon</option>
+			<option value="Pathologist">Pathologist</option>
+			<option value="Paediatrics">Paediatrics</option>
+			<option value="Pulmonology">Pulmonology</option>
+			<option value="Radiology">Radiology</option>
+			<option value="Rheumatologist">Rheumatologist</option>
+			<option value="Rehabilitation">Rehabilitation</option>
+			<option value="Urology">Urology</option>
+		</select>  
+										
+		<select style=" float:right;width:15%;margin-right:15px;"  name="s_hospital"  ng-model="user.hospital" ng-init="user.hospital='Maroof Hospital'" class="txtfield" tabindex="1">
+			<option value="Maroof Hospital">Maroof Hospital</option>
+		</select>    
+		
+
+		<autocomplete style=" float:right;width:15%;margin-right:20px;" attr-placeholder="Search Doctor Names..." click-activation="true" data="names" on-type="doSomething" on-select="doSomethingElse" ng-model="user.name" ng-init="user.name=null" name="uName"></autocomplete>
+	 
+		<div ng-show="form.$submitted || form.uName.$touched">
+		</div>
+		
+	</form>
+		
+		</div>
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+<div class="clear"></div>
+
+
+
+
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="rslides" style= "background-color: #F9FFFF; ">
+
+	<div class="datagrid">
+		<table>
+			<thead ng-show="Doctors.length" ><tr><th style ="width: 15%"></th><th>Doctor Name</th><th>Gender</th><th>Type</th><th>Hospital</th></tr></thead>
+			<tbody ng-repeat="doctor in Doctors track by $index" style="margin-left=10%; margin-right=10%;">
+				<tr>
+					<td style ="width: 15%"><img src={{doctor.photoUrl}} style="width:5em;height:5em;" /></td>
+					<td><input style="background: none; border: none; cursor: pointer; color: blue;" type="submit" ng-click="getDoctor(doctor.name)"  value={{doctor.name}}></td>
+					<td>{{doctor.gender}}</td>
+					
+					<td>{{doctor.type}}</td>
+					<td>{{doctor.location}}</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<table>
+			<tbody style="margin-left=10%; margin-right=10%;"><tr ng-show= "!Doctors.length" style="width:5em;height:5em;"><td>No Results Found</td></tr></tbody>
+		</table>
+	</div> -->
+<!-- 	<div id="map"></div>
+										<div id="clearfix"></div>
+										<div id="repeat" ng-repeat="marker in markers | orderBy : 'title'">
+											 <a style=" float:right; margin-right:0.5%;margin-top:0.25%; padding: 8px 26px 8px 26px;"  class="flatbtn-blu hidemodal" href="#" ng-click="openInfoWindow($event, marker)">
+											 <label id="names" >{{marker.title}}</label></a>
+										</div> -->
+<!-- </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--start-worker-->
+		<div class="new-trailers">
+	    <div class="container">
+				<!-- <h3>Workers Openion</h3> -->
+			 <div class="trailer-top">
+				
+				<div class="col-md-5 trailer-text"  ng-show="Doctors.length" >
+
+
+				   		
+				   	<div ng-repeat="doctor in Doctors track by $index"  class="sub-trailer">
+				       <div class="col-md-4 sub-img">
+							<img src={{doctor.photoUrl}} alt="img07"/>
+					   </div>
+					   <div class="col-md-8 sub-text">
+					   		 <a href="#"><input style="background: none; border: none; cursor: pointer; color: blue;" type="submit" ng-click="getDoctor(doctor.name)"  value={{doctor.name}}></a>
+							 <p>{{doctor.type}}</p>
+							 <p>{{doctor.location}}</p>
+					   </div>
+					    <div class="clearfix"> </div>
+				   </div>
+				</div> 
+				<div class="col-md-7 trailer">
+						<div id="map"></div>
+										<div id="clearfix"></div>
+										<div id="repeat" ng-repeat="marker in markers | orderBy : 'title'">
+											 <a style=" float:right; margin-right:0.5%;margin-top:0.25%; padding: 8px 26px 8px 26px;"  class="flatbtn-blu hidemodal" href="#" ng-click="openInfoWindow($event, marker)">
+											 <label id="names" >{{marker.title}}</label></a>
+										</div>
+				</div>
+				 <div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>

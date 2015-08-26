@@ -1,0 +1,187 @@
+
+<!DOCTYPE HTML>
+<html ng-app="DocDisp">
+	<head >
+		<title>DocLocator search results</title>
+<script
+  src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+<script
+  src="http://maps.googleapis.com/maps/api/js?sensor=false&language=en"></script>
+		<script src="js/angular-1.2.20.min.js"></script>
+		<script src="js/angular-resource.js"></script>
+		<script src="js/angular-router-ui.min.js"></script> 
+		<script src="control.js"></script>
+		<script src="js/autocomplete.js"></script>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">		
+		<link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+		<link rel="stylesheet" href="css/autocomplete.css">
+		<link rel="stylesheet" href="css/PopupStyle.css">
+		<link rel="stylesheet" href="css/style1.css">
+		<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<link href="css/bootstrap1.css" rel='stylesheet' type='text/css' />
+		<link href="css/doctorListStyle.css" rel='stylesheet' type='text/css' />
+		
+		<link rel="stylesheet" href="css/maps.css">
+
+  <script type="text/javascript" src="js/maps.js"></script>	
+		
+	</head>
+
+
+	<body >
+	
+			<!----start-header---->
+	<div class="header" id="home">
+		  <div class="container">
+				<div class="logo">
+					<a href="index.html"><img src="images/MainLogo.png" alt=""></a>
+				</div>
+				
+				<div class="menu">			
+				  <div class="top-menu navigation">
+					 <span class="menu"></span> 
+					 <ul class="navig">
+						 <li class="active"><a href="index.html">Home</a></li>
+						 <li><a href="about.html">About</a></li>
+						 <li><a href="blog.html">Blog</a></li>
+						 <li><a href="contact.html">Contact</a></li>
+					 </ul>
+				  </div>
+				<!-- script-for-menu -->
+				 <script>
+					$("span.menu").click(function(){
+						$(" ul.navig").slideToggle("slow" , function(){
+						});
+					});
+				 </script>
+				<!-- script-for-menu -->
+
+				  <!-- <div class="search">
+						 <form>
+							<input type="text" value="" placeholder="Search...">
+							<input type="submit" value="">
+							</form>
+					</div> -->
+				</div>
+			  <div class="clearfix"></div>
+		 </div>	
+	</div>
+	<!----end-header---->
+
+	<div class="clearfix"></div>
+	
+	<!--welcome-starts--> 
+	
+	
+		
+	
+	<!---------------------------------------------------------------------------------------------------------------------->
+	
+	
+	<!-- 
+	
+	
+	
+			 <div class="container" style="margin-top:40%;margin-bottom:20%;">
+			 <div class="banner-sec">
+				 <div class="banner-top">
+				
+							<div class="col-md-4 banner-text" >
+								<div class="banner-text_grid">
+										<div >
+		
+										<ui-view></ui-view>
+			
+										</div>
+								</div>
+							</div>
+							<div class="col-md-4 banner-text">
+								<div class="banner-text_grid">
+										<div id="map"></div>
+										<div id="clearfix"></div>
+										<div id="repeat" ng-repeat="marker in markers | orderBy : 'title'">
+											 <a id="country_container" href="#" ng-click="openInfoWindow($event, marker)">
+											 <label id="names" >{{marker.title}}</label></a>
+										</div>
+								</div>
+							</div>				
+					 <div class="clearfix"></div>
+				 </div>
+			 </div>
+		 </div>
+	
+	
+	 -->
+	
+	
+	<!---------------------------------------------------------------------------------------------------------------------->
+	
+	
+	
+	
+	
+	<div >
+		
+		<ui-view></ui-view>
+			
+	</div>
+	
+
+
+	 <!--footer-->
+	<div class="footer">
+		  <div class="footer-grids">
+			  <div class="container">
+				  <div class="col-md-3 footer-grid">
+						<h4>Services</h4>
+						<ul>
+							<li><a href="#">Search By Doctor</a></li>
+							<li><a href="#">Search By Time</a></li>
+							<li><a href="#">Search By Speciality</a></li>
+							<li><a href="#">Search by Hospital</a></li>
+						</ul>
+				  </div>
+				 <div class="col-md-3 footer-grid">
+						<h4>Information</h4>
+					   <ul>
+							<li><a href="about.html">Our Team</a></li>
+					  </ul>
+				 </div>
+				 <div class="col-md-3 footer-grid">
+						<h4>More details</h4>
+						<ul>
+							<li><a href="about.html">About us</a></li>
+							<li><a href="contact.html">Privacy Policy</a></li>
+							<li><a href="contact.html">Site map</a></li>
+						</ul>
+				 </div>
+				 <div class="col-md-3 footer-grid contact-grid">
+						<h4>Contact us</h4>
+						<ul>
+							<li>LMK Resources Pakistan (Pvt) Ltd
+							</li>
+							<li><a href="mailto:info@codeforpakistan.org">info@codeforpakistan.org</a></li>
+							<li>9th Floor, PTET Tower,
+								Jinnah Avenue, Islamabad,
+								Pakistan.</li>
+						</ul>
+						<ul class="social-icons">
+							<li><a href="https://www.facebook.com/CodeforPK"><span class="facebook"> </span></a></li>
+							<li><a href="https://twitter.com/codeforpakistan"><span class="twitter"> </span></a></li>
+						</ul>
+				 </div>
+				 <div class="clearfix"></div>
+			 </div>
+		 </div>
+	</div>
+	<div class="copy">
+			 <p>Copyright &copy; 2015 Code For Pakistan. All rights reserved</p>
+	 </div>
+	 <!--footer-->	
+
+
+	</body>
+	
+</html>
+

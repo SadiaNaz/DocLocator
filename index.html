@@ -1,0 +1,242 @@
+
+<html ng-app="DoctorFind">
+	<head>
+		<title>DocLocator</title>
+
+		<script src="js/angular-1.2.20.min.js"></script>
+		<script src="js/angular-resource.js"></script>
+		<script src="js/angular-router-ui.min.js"></script> 
+		<script src="control.js"></script>
+		<script src="js/autocomplete.js"></script>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/autocomplete.css">
+		<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+		<link href="css/responsiveslides.css" rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="css/PopupStyle.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="js/jquery.leanModal.min.js"></script>
+		
+		<!-- banner Slider starts Here -->
+			<script src="js/responsiveslides.min.js"></script>
+			 <script>
+				// You can also use "$(window).load(function() {"
+				$(function () {
+				  // Slideshow 4
+				  $("#slider1").responsiveSlides({
+					auto: true,
+					pager: false,
+					nav: false,
+					speed: 500,
+					namespace: "callbacks",
+					before: function () {
+					  $('.events').append("<li>before event fired.</li>");
+					},
+					after: function () {
+					  $('.events').append("<li>after event fired.</li>");
+					}
+				  });
+			
+				});
+			  </script>
+		<!--//End-slider-script -->
+	</head>
+	<body>
+	<!----start-header---->
+	<div class="header" id="home">
+		  <div class="container">
+				<div class="logo">
+					<a href="index.html"><img src="images/MainLogo.png" alt=""></a>
+				</div>
+				
+				<div class="menu">			
+				  <div class="top-menu navigation">
+					 <span class="menu"></span> 
+					 <ul class="navig">
+						 <li class="active"><a href="index.html">Home</a></li>
+						 <li><a href="about.html">About</a></li>
+						 <li><a href="contact.html">Contact</a></li>
+					 </ul>
+				  </div>
+				<!-- script-for-menu -->
+				 <script>
+					$("span.menu").click(function(){
+						$(" ul.navig").slideToggle("slow" , function(){
+						});
+					});
+				 </script>
+				<!-- script-for-menu -->
+
+				  <!-- <div class="search">
+						 <form>
+							<input type="text" value="" placeholder="Search...">
+							<input type="submit" value="">
+							</form>
+					</div> -->
+				</div>
+			  <div class="clearfix"></div>
+		 </div>	
+	</div>
+	<!----end-header---->
+	<div class="banner">
+		 <div  id="top" class="callbacks_container">
+				<ul class="rslides" id="slider1">
+				  <li>
+					  <div class="banner-info">
+						 <h3>Find a Doctor</h3>
+						<p>DocLocator helps you find a perfect match for your medical needs</p>
+					  </div>
+						<img src="images/slider-image4.png"  alt="">
+				  </li>
+				  <li>
+					  <div class="banner-info">
+						 <h3>Get the care you need</h3>
+						<p>This app provides you with basic professional information on virtually every licensed Doctor in Pakistan</p>
+					  </div>
+					  <img src="images/slider-image2.png" alt=""></li>
+				  <li>
+					  <div class="banner-info">
+						 <h3>Bridging Doctors and Patients</h3>
+						<p>Bringing together doctors and patients on one platform</p>
+					  </div>
+					  <img src="images/slider-image1.jpg" alt=""></li>
+				  <li>
+					  <div class="banner-info">
+						 <h3>Be a part of our listing</h3>
+						<p>Are you a doctor, hospital or special clinic? Be a part of our listing and get more patients come to you</p>
+					  </div>
+					  <img src="images/slider-image3.jpg" alt=""></li>
+				</ul>
+		 </div>
+		 <div class="container">
+			 <div class="banner-sec">
+				 <div class="banner-top">
+							<div class="col-md-4 banner-text">
+								<div class="banner-text_grid">
+									<a href="#loginmodal" id="modaltrigger">
+										<img src="images/grid-img1.png" class="img-responsive" alt="/">
+										<h4>Search By Doctor</h4>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-4 banner-text">
+								<div class="banner-text_grid">
+									<a href="#loginmodal2" id="modaltrigger2">
+										<img src="images/grid-img2.png" class="img-responsive" alt="/">
+										<h4>Search By Timings</h4>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-4 banner-text">
+								<div class="banner-text_grid">
+								<a href="#loginmodal1" id="modaltrigger1">
+										<img src="images/grid-img3a.png" class="img-responsive" alt="/">
+										<h4>Search By Speciality</h4>
+									</a>
+								</div>
+							</div>				
+					 <div class="clearfix"></div>
+				 </div>
+			 </div>
+		 </div>
+	</div>
+	<!--welcome-starts--> 
+	<div class="welcome">
+			
+	</div>
+ <!--footer-->
+	<div class="footer">
+		  <div class="footer-grids">
+			  <div class="container">
+				  <div class="col-md-3 footer-grid">
+						<h4>Services</h4>
+						<ul>
+							<li><a href="#">Search By Doctor</a></li>
+							<li><a href="#">Search By Time</a></li>
+							<li><a href="#">Search By Speciality</a></li>
+							<li><a href="#">Search by Hospital</a></li>
+						</ul>
+				  </div>
+				 <div class="col-md-3 footer-grid">
+						<h4>Information</h4>
+					   <ul>
+							<li><a href="about.html">Our Team</a></li>
+					  </ul>
+				 </div>
+				 <div class="col-md-3 footer-grid">
+						<h4>More details</h4>
+						<ul>
+							<li><a href="about.html">About us</a></li>
+							<li><a href="contact.html">Privacy Policy</a></li>
+							<li><a href="contact.html">Site map</a></li>
+						</ul>
+				 </div>
+				 <div class="col-md-3 footer-grid contact-grid">
+						<h4>Contact us</h4>
+						<ul>
+							<li>LMK Resources Pakistan (Pvt) Ltd
+							</li>
+							<li><a href="mailto:info@codeforpakistan.org">info@codeforpakistan.org</a></li>
+							<li>9th Floor, PTET Tower,
+								Jinnah Avenue, Islamabad,
+								Pakistan.</li>
+						</ul>
+						<ul class="social-icons">
+							<li><a href="https://www.facebook.com/CodeforPK"><span class="facebook"> </span></a></li>
+							<li><a href="https://twitter.com/codeforpakistan"><span class="twitter"> </span></a></li>
+						</ul>
+				 </div>
+				 <div class="clearfix"></div>
+			 </div>
+		 </div>
+	</div>
+	<div class="copy">
+			 <p>Copyright &copy; 2015 Code For Pakistan. All rights reserved</p>
+	 </div>
+	 <!--footer-->	
+
+	 
+	<!--Form Views-->
+	<div>
+		<ui-view></ui-view>
+	</div>
+	 
+	 
+	 <!-- JScript For Popups Forms -->
+			<script type="text/javascript">
+			$(function(){
+			  $('#loginform').submit(function(e){
+				return false;
+			  });
+			  
+			  $('#modaltrigger').leanModal({ top: 110, overlay: 0.65, closeButton: ".hidemodal" });
+			});
+			
+			</script>
+			
+			
+			<script type="text/javascript">
+			$(function(){
+			  $('#loginform').submit(function(e){
+				return false;
+			  });
+			  
+			  $('#modaltrigger1').leanModal({ top: 120, overlay: 0.65, closeButton: ".hidemodal" });
+			});
+			
+			</script>
+			
+			
+			<script type="text/javascript">
+			$(function(){
+			  $('#loginform').submit(function(e){
+				return false;
+			  });
+			  
+			  $('#modaltrigger2').leanModal({ top: 110, overlay: 0.65, closeButton: ".hidemodal" });
+			});
+			
+			</script>
+	</body>
+</html>

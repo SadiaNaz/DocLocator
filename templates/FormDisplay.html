@@ -1,0 +1,153 @@
+<!-- Popup Forms -->
+	
+	
+	<!-- Search By Doctor Form -->
+	
+	<div class="popup" id="loginmodal" style="display:none;">
+		
+		<h1>Search By Doctor</h1>
+		
+		<form id="loginform" name="loginform" class="css-form" novalidate  autocomplete="on">
+		
+			<label for="username">Select Hospital</label>
+				  
+			<select name="s_type"  ng-model="user.hospital" ng-init="user.hospital='Maroof Hospital'" class="txtfield" tabindex="1">
+				<option value="Maroof Hospital">Maroof Hospital</option>
+			</select>    
+			
+			
+			<label>Doctor Name</label>
+			<autocomplete attr-placeholder="Type to search Doctor Names..." click-activation="true" data="names" on-type="doSomething" on-select="doSomethingElse" ng-model="user.name" ng-init="user.name=null" name="uName"></autocomplete>
+			 
+			<div ng-show="form.$submitted || form.uName.$touched">
+			</div>
+			
+				  
+			<div class="center">
+				<input type="submit" ng-click="getDoctors(user,1)" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Search" tabindex="3">
+			</div>
+			
+		</form>
+	 
+	</div>
+	
+	
+	
+	<!-- Search By Time Form -->
+	
+	<div class="popup" id="loginmodal2" style="display:none;">
+   
+		<h1>Search By Time</h1>
+			
+		<form id="loginform" name="loginform" class="css-form" novalidate   autocomplete="on" >
+
+			<label for="username">Select Speciality</label>
+				  
+			<select name="s_type" ng-model="user.docType" class="txtfield" ng-init="user.docType='All'" tabindex="1">
+				<option value="All" selected="selected">All</option>
+				<option value="Anesthesia & Intensive Care">Anesthesia & Intensive Care</option>
+				<option value="Cardiology">Cardiology</option>
+				<option value="Dental">Dental</option>
+				<option value="Dermatology">Dermatology</option>
+				<option value="Endocrinology">Endocrinology</option>
+				<option value="ENTsurgery">ENTsurgery</option>
+				<option value="Eye Specialist / Ophthalmology">Eye Specialist / Ophthalmology</option>
+				<option value="Gastroenterology/Hepatology">Gastroenterology/Hepatology</option>
+				<option value="General & Laparoscopic Surgeons">General & Laparoscopic Surgeons</option>
+				<option value="General Physician / Medical Specialist / Internist">General Physician / Medical Specialist / Internist</option>
+				<option value="Gynae-Obs">Gynae-Obs</option>
+				<option value="Histopathologist">Histopathologist</option>
+				<option value="Haematologist">Haematologist</option>
+				<option value="Microbiologist">Microbiologist</option>
+				<option value="Nephrology">Nephrology</option>
+				<option value="Neuro Physician">Neuro Physician</option>
+				<option value="Neuro Surgeon">Neuro Surgeon</option>
+				<option value="Orthopedic Surgery">Orthopedic Surgery</option>
+				<option value="Psychologist">Psychologist</option>
+				<option value="Psychiatrist">Psychiatrist</option>
+				<option value="Plastic & Burn Surgeon">Plastic & Burn Surgeon</option>
+				<option value="Pathologist">Pathologist</option>
+				<option value="Paediatrics">Paediatrics</option>
+				<option value="Pulmonology">Pulmonology</option>
+				<option value="Radiology">Radiology</option>
+				<option value="Rheumatologist">Rheumatologist</option>
+				<option value="Rehabilitation">Rehabilitation</option>
+				<option value="Urology">Urology</option>
+			</select>    
+			
+			<label >Date and Time</label>	    
+			<input type="datetime-local" class="txtfield" ng-model="user.datetime" name="datetime">
+			
+			<label >Gender: </label>
+			<input type="radio" ng-init="user.gender='Both'" name="gender" ng-model="user.gender" value="male" />Male
+			<input type="radio" name="gender" ng-model="user.gender" value="female" />Female
+			
+			<div class="center">	
+				<input type="submit" ng-click="getDoctors(user,3)" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Search" tabindex="3">
+			</div>
+			
+		</form>
+	 
+	</div>
+	
+	
+	
+	
+	<!-- Search By Speciality Form -->
+	
+	<div  class="popup" id="loginmodal1" style="display:none;" >
+		
+		<h1>Search By Speciality</h1>
+			
+		<form id="loginform" name="loginform"  class="css-form" novalidate  autocomplete="on"	>
+		
+			<label for="username">Select Speciality</label>
+				  
+			<select name="s_type" ng-model="user.docType" class="txtfield" ng-init="user.docType='All'" tabindex="1">
+				<option value="All" selected="selected">All</option>
+				<option value="Anesthesia & Intensive Care">Anesthesia & Intensive Care</option>
+				<option value="Cardiology">Cardiology</option>
+				<option value="Dental">Dental</option>
+				<option value="Dermatology">Dermatology</option>
+				<option value="Endocrinology">Endocrinology</option>
+				<option value="ENTsurgery">ENTsurgery</option>
+				<option value="Eye Specialist / Ophthalmology">Eye Specialist / Ophthalmology</option>
+				<option value="Gastroenterology/Hepatology">Gastroenterology/Hepatology</option>
+				<option value="General & Laparoscopic Surgeons">General & Laparoscopic Surgeons</option>
+				<option value="General Physician / Medical Specialist / Internist">General Physician / Medical Specialist / Internist</option>
+				<option value="Gynae-Obs">Gynae-Obs</option>
+				<option value="Histopathologist">Histopathologist</option>
+				<option value="Haematologist">Haematologist</option>
+				<option value="Microbiologist">Microbiologist</option>
+				<option value="Nephrology">Nephrology</option>
+				<option value="Neuro Physician">Neuro Physician</option>
+				<option value="Neuro Surgeon">Neuro Surgeon</option>
+				<option value="Orthopedic Surgery">Orthopedic Surgery</option>
+				<option value="Psychologist">Psychologist</option>
+				<option value="Psychiatrist">Psychiatrist</option>
+				<option value="Plastic & Burn Surgeon">Plastic & Burn Surgeon</option>
+				<option value="Pathologist">Pathologist</option>
+				<option value="Paediatrics">Paediatrics</option>
+				<option value="Pulmonology">Pulmonology</option>
+				<option value="Radiology">Radiology</option>
+				<option value="Rheumatologist">Rheumatologist</option>
+				<option value="Rehabilitation">Rehabilitation</option>
+				<option value="Urology">Urology</option>
+			</select>    
+				  
+			<label >Gender: </label>
+			<input type="radio" ng-init="user.gender='Both'" name="gender" ng-model="user.gender" value="male" />Male
+			<input type="radio" name="gender" ng-model="user.gender" value="female" />Female
+				  
+			<div class="center">
+				<input type="submit" ng-click="getDoctors(user,2)" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Search" tabindex="3">
+			</div>
+			  
+		</form>
+	 
+	</div>
+	
+	
+	
+	
+	<!-- End Popup Forms -->
